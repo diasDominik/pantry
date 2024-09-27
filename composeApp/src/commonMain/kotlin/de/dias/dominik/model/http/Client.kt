@@ -23,7 +23,7 @@ object Client {
             }
         }
 
-    suspend fun requestProduct(ean: Long) =
+    suspend fun requestProduct(ean: String) =
         withContext(Dispatchers.IO) {
             clientInitialized = true
 

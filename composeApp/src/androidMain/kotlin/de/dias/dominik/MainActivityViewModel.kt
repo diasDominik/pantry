@@ -20,7 +20,7 @@ class MainActivityViewModel(
     var barcodeText by mutableStateOf("")
         private set
 
-    fun requestProduct(ean: Long): Flow<ProductResponse> =
+    fun requestProduct(ean: String): Flow<ProductResponse> =
         callbackFlow {
             viewModelScope.launch {
                 try {

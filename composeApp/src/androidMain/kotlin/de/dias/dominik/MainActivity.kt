@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
                                                 scope.launch {
                                                     mainActivityViewModel
                                                         .requestProduct(
-                                                            mainActivityViewModel.barcodeText.toLong(),
+                                                            mainActivityViewModel.barcodeText,
                                                         ).collect {
                                                             url = it.products.firstOrNull()?.image_thumb_url ?: ""
                                                         }
@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
                                                     scope.launch {
                                                         mainActivityViewModel
                                                             .requestProduct(
-                                                                mainActivityViewModel.barcodeText.toLong(),
+                                                                mainActivityViewModel.barcodeText,
                                                             ).collect {
                                                                 url =
                                                                     it.products.firstOrNull()?.image_thumb_url

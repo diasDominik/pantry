@@ -10,6 +10,6 @@ data class PantryItem(
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "quantity") val quantity: Int,
     @ColumnInfo(name = "mhd") val mhd: Long,
-    @ColumnInfo(name = "ean") val ean: Long,
+    @ColumnInfo(name = "ean") val ean: String,
     @ColumnInfo(name = "url") val url: String,
 )
